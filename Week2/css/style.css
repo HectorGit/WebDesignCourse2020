@@ -64,7 +64,13 @@ table {
 
     text-align: center;
     font-size: 48px;
-
+    font-weight: bold;
+    font-family: "Helvetica";
+    margin-bottom: 20px;
+    color:white;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #intro
@@ -80,8 +86,9 @@ table {
 
 #footer
 {
-    height:50px;
-    background-color: gray;
+    /* height:50px; */
+    /* background-color: gray; */
+    color:gray;
     text-align: center;
     font-family: "Helvetica";
     font-size: 12px;
@@ -106,9 +113,10 @@ table {
 #intro_right
 {
     width:200px;
-    background-color: blue;
+    /* background-color: blue; */
     display: inline-block;
     vertical-align: middle;
+    font-family: "Helvetica";
 }
 
 #intro_right h1
