@@ -1,0 +1,27 @@
+body
+{
+    background-color: #eeeeee;
+    text-align: center;
+    font-family: "Helvetica";
+}
+
+h1
+{
+    letter-spacing: 2px;
+    color:"#00789f";
+}
+
+p
+{
+    color:"#000";
+}
+
+a
+{
+    color:black;
+}
+
+img
+{
+    width:400px;
+}
