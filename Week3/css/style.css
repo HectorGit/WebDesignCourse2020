@@ -85,7 +85,7 @@ table {
     height:500px;
     width:300px;
     display:inline-block;
-    background-color: #333;
+    /* background-color: #333; */
     vertical-align: top;
 }
 
@@ -116,8 +116,8 @@ table {
 
 #video
 {
-    height:300px;
-    background-color: pink;
+    /* height:300px;
+    background-color: pink; */
     margin-bottom:20px;
 }
 
