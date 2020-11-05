@@ -125,7 +125,16 @@ table {
 
 #menu
 {
-    height:100px;
+    /* height:100px; */
     margin-top:20px;
-    background-color: #333;
+    text-align:right;
+    /* background-color: #333; */
+    /* color:red; */
+    /* float:right; */
+}
+
+#menu a
+{
+    color:red;
+    text-decoration: none;
 }
