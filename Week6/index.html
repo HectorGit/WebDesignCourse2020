@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+
   </head>
   <body>
     <!-- https://getbootstrap.com/docs/4.4/examples/ for layout inspiration -->
@@ -17,61 +24,158 @@
     <div class = "container">
 
         <!--title / logo -->
-        <div class = "row mt-3">
-          <h1>SONGWRITER'S BLOG</h1>
+        <div class = "row mt-3 " >
+          <div class = "col-12" style = "background-color:black; color:white;">
+            <h1 class = "mx-auto" style ="width:500px;">SONGWRITER'S BLOG</h1>
+          </div>
         </div><!--title / logo -->
 
         <!--navbar -->
         <div class = "row">
-          <p>NAV BAR</p>
+          <!-- <p>NAV BAR</p> -->
+          <div class = "col-12">
+            <nav class="navbar navbar-dark navbar-expand-xl bg-dark">
+              <!-- Navbar content -->
+              <a class="navbar-brand" href="#">Lets Explore ! </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" href="#musicTheory">Music Theory</a> <!--<span class="sr-only">(current)</span></a>-->
+                  <a class="nav-link" href="#genre">Genres</a>
+                  <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                </div>
+              </div>
+            </nav>
+          </div>
         </div><!--navbar -->
         
         <!--primary content-->
-        <div class = "row mt-3">
+        <div class = "row my-3">
 
           <!--left-->
-          <div class = "col-9">
+          <div class = "col-9 ">
 
             <!-- Hector Bio -->
             <div class = "row">
               <div class = "col-3">
-                <h1>IMAGE OF HECTOR</h1>
+                <!-- <h1>IMAGE OF HECTOR</h1> -->
+                <img src="images/cropped/hector_perez.png" alt="..." class="d-block w-75 rounded-circle">
               </div>
-              <div class = "col-9">              
-                <p>Text about Hector</p>    
-                <p>Button to open Modal with 'More'</p>
+              <div class = "col-9 my-4">              
+                <p class = "d-block">Hi I'm Hector, and I am passionate about songwriting! </p>  
+                <p class = "d-inline">Let's learn together! </p>      
+                <button type="button" class="btn btn-secondary d-inline" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+                  More ...
+                </button>     
               </div>
             </div><!-- Hector Bio -->
 
             <!-- Carousel Topic 1 -->
-            <div class = "row mt-3">              
-              <h1>TOPIC 1</h1>
+            <div class = "row mt-3 mx-auto " id="musicTheory" style = "width:500px;">              
+              <h1>MUSIC THEORY</h1>
             </div>
-            <div class = "row ">
-              <p>Carousel for topic 1</p>
+            <div class = "row mx-auto" style = "width:500px;">
+              <div id="musicTheoryIndicators" class="carousel slide" data-pause="hover" data-interval=10000><!-- prevent autoscroll by remove data-ride="carousel">--> 
+                <ol class="carousel-indicators">
+                  <li data-target="#musicTheoryIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#musicTheoryIndicators" data-slide-to="1"></li>
+                  <li data-target="#musicTheoryIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-500" src="images/cropped/musictheory1.png" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Counterpoint</h5>
+                      <p>Multiple voices can harmonize a single melody</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-500" src="images/cropped/musictheory2.png" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Counterpoint</h5>
+                      <p>Multiple voices can harmonize a single melody</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-500" src="images/cropped/musictheory3.png" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Counterpoint</h5>
+                      <p>Multiple voices can harmonize a single melody</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#musicTheoryIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#musicTheoryIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
             </div><!-- Carousel Topic 1 -->
 
             <!-- Carousel Topic 2 -->
-            <div class = "row mt-3">
-              <h1>TOPIC 2</h1>
+            <div class = "row my-3 mx-auto" id="genre" style = "width:500px;">
+              <h1>GENRE</h1>
             </div>
-            <div class = "row">
-                <p>Carousel for topic 2</p>
+            <div class = "row mx-auto" style = "width:500px;">
+              <div id="genreIndicators" class="carousel slide" data-pause="hover" data-interval=10000><!-- prevent autoscroll by remove data-ride="carousel">--> 
+                <ol class="carousel-indicators">
+                  <li data-target="#genreIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#genreIndicators" data-slide-to="1"></li>
+                  <li data-target="#genreIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-500" src="images/cropped/genre1.png" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Rock</h5>
+                      <p>Lively agressive riffs that will make you pump your fists in the air</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-500" src="images/cropped/genre2.png" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Rock</h5>
+                      <p>Lively agressive riffs that will make you pump your fists in the air</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-500" src="images/cropped/genre3.png" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Rock</h5>
+                      <p>Lively agressive riffs that will make you pump your fists in the air</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#genreIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#genreIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
             </div><!-- Carousel Topic 2 -->
 
           </div><!--left-->
 
           <!--right-->
-          <div class = "col-3">
+          <div class = "col-3 mt-5" style="width:300px;">
             <h1>LATEST NEWS</h1>
-            <ul>
-              <li><a href = "#">New Item 1</a></li>
-              <li><a href = "#">New Item 2</a</li>
-              <li><a href = "#">New Item 3</a></li>
+            <ul class = "list-group mt-4">
+              <li class = "list-group-item"><a href = "#" class="text-info">Best 10 Strategies to write Songs Faster</a></li>
+              <li class = "list-group-item"><a href = "#" class="text-info">Song of the Year announces its results for 2020</a</li>
+              <li class = "list-group-item"><a href = "#" class="text-info">Get Started Kit for Promoting your Original Songs</a></li>
             </ul>
-            <p>How to use this site</p>
-            <h1>IMG or ICON of '?'</h1>
-            <p>(opens a tool tip)</p>
+            <p class = "mt-4 mx-auto" style="width: 200px;">How to use this site</p>
+            <img class="d-block w-25 mx-auto" src="images/cropped/question.png" alt="Question Mark" data-toggle="tooltip" data-placement="right" title="Explore Content!">
+            <!-- <h1>IMG or ICON of '?'</h1> -->
+            <!-- <p>(opens a tool tip)</p> -->
           </div><!--right-->
 
         </div><!--primary content-->
